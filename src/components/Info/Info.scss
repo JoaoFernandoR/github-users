@@ -1,9 +1,7 @@
 .info {
-    max-width: 1200px;
-    margin: auto;
     display: flex;
     justify-content: space-evenly;
-    padding: 1rem;
+    padding: 2rem;
 
     @media (max-width: 668px) {
         flex-direction: column;
@@ -26,7 +24,7 @@
             display: flex
         }
 
-        .followers {
+        .followers-icon {
             background-color: rgba(87, 189, 82, 0.3);
         }
 

@@ -11,7 +11,7 @@ import './Dashboard.scss'
 
 const Dashboard = () => {
     return (
-    <section>
+    <section className="dashboard">
         {/* <Navbar /> */}
         {/* <Search /> */}
         <Info />

@@ -1,0 +1,66 @@
+.card {
+    width: 50%;
+    margin: 1rem;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    .img_container {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        img {
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+        }
+        
+        .username_container {
+            display: flex;
+            flex-direction: column ;
+            margin-top: 1rem;
+            margin-left: 1rem;
+        }
+
+        a {
+            letter-spacing: 0.2rem;
+            color: #47A699;
+            border: 1px solid #47A699;
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+
+            &:hover {
+                color: white;
+                background-color: #47A699;
+            }
+        }
+
+        
+    }
+
+    .bio {
+        margin: 1rem 0rem;
+    }
+
+    .info_user {
+        display: flex;
+        align-items: center;
+        margin: 0.2rem 0rem;
+        color: grey;
+
+        p {
+            margin-left: 0.5rem;
+            font-size: 0.9rem;
+        }
+        a {
+            margin-left: 0.5rem;
+            font-size: 0.9rem;
+            color: #47A699;
+        }
+    }
+
+}

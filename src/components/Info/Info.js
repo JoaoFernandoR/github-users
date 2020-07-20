@@ -12,7 +12,7 @@ const Info = () => {
 
     const items = [
         { id: 1, icon: <GoRepo size="1.5rem" color= "#C22079"/>, label: 'Repos', api: public_repos},
-        { id: 2, icon: <FiUsers size="1.5rem" color= "#47A699"/>, label: 'Followers', api: followers, className:"followers"},
+        { id: 2, icon: <FiUsers size="1.5rem" color= "#47A699"/>, label: 'Followers', api: followers, className:"followers-icon"},
         { id: 3, icon: <FiUserPlus size="1.5rem" color= "#7361F6"/>, label: 'Following', api: following, className:"following"},
         { id: 4, icon: <GoGist size="1.5rem" color= "#E5CC72"/>, label: 'Gists', api: public_gists, 
         className:"gists"}
