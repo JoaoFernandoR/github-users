@@ -17,4 +17,5 @@ Who provided this awesome class and have a lot of excelent courses
 - [ ] Implement a theme switcher
 - [ ] Review the backend part
 - [ ] Refactor the code
+- [ ] Learn more of Context API
 

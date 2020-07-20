@@ -6,6 +6,8 @@
     align-items: center;
     justify-content: center;
     clip-path: polygon(50% 0%, 0 81%, 100% 81%);
+    max-width: 800px;
+    margin: auto;
 
     img {
         width: 300px;
@@ -19,26 +21,22 @@
     }
 
     .error_button {
-
-        background-color: rgba(13, 84, 131, 0.8);
-        padding: 0.8rem 1.6rem;
-        border-radius: 10px;
-        border: 1px solid transparent;
-
-        &:hover {
-            background-color: whitesmoke;
-            border: 1px solid blue;
-            cursor: pointer;
-
-            a {
-                color: #0d5483cc;
-
-            }
-        }
-
+        margin: 1rem 0rem;
+        
         a {
             color: whitesmoke;
             letter-spacing: 1px;
+            background-color: rgba(13, 84, 131, 0.8);
+            padding: 0.8rem 1.6rem;
+            border-radius: 10px;
+            border: 1px solid transparent;
+
+            &:hover {
+                background-color: whitesmoke;
+                border: 1px solid blue;
+                color: #0d5483cc;
+            }
+            
         }
     }
 

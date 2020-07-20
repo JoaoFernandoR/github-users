@@ -1,0 +1,31 @@
+.container_login {
+    max-width: 800px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    img {
+        max-width: 100%;
+    }
+
+    h1 {
+        color: #2CAEBA;
+        margin-top: 1rem;
+    }
+}
+
+.button_login {
+    
+    margin: 0.8rem 0px;
+    
+    a {
+        padding: 8px 16px;
+        background-color: #9CDADE;
+        border-radius: 10px;
+        color: #23232e;
+        font-weight: bold;
+    }
+}
