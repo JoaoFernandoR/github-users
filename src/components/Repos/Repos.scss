@@ -1,13 +1,15 @@
-div {
-    width: 100%;
+.repos {
+
+    display: flex;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  
+    .chart {
+        margin: 1rem;
+
+        @media (max-width: 1160px) {
+            margin: auto;
+        }
+    }
 }
 
-.fusioncharts-container {
-    width: 100%;
-}
-
-svg {
-    width: 100%;
-}
-
-// Aplicar essas propriedades se tiver algum problema com a responsividade dos gráficos

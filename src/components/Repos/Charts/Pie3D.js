@@ -10,14 +10,16 @@ const ExampleChart = ({data}) => {
 
 const chartConfigs = {
     type: "pie3d", // The chart type
-    width: "50%", // Width of the chart
-    height: "400", // Height of the chart
+    width: "400", // Width of the chart
+    height: "500", // Height of the chart
     dataFormat: "json", // Data type
     dataSource: {
       // Chart Configuration
       chart: {
         caption: "Languages",
         theme: "fusion",
+        decimals: 0,
+        pieRadius: "50%"
       },
       // Chart Data
       data: data

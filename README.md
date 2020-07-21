@@ -19,4 +19,5 @@ Who provided this awesome class and have a lot of excelent courses
 - [ ] Learn more of Context API
 - [ ] Mess with the global variables
 - [ ] Understand more the reduce method
+- [ ] Make the Charts responsible
 
