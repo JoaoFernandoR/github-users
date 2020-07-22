@@ -4,10 +4,21 @@
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: 668px) {
+        flex-direction: column;
+        padding: 0.5rem;
+
+    }
+
     .input-group {
         display: flex;
         width: 70%;
         align-items: center;
+
+        @media (max-width: 668px) {
+            width: 90%;
+            margin: auto;
+        }
 
         .icon {
             padding: 0.5rem;
@@ -25,6 +36,10 @@
 
             &:focus {
                 border-bottom: 1px solid var(--mainGreen) ;
+
+                &::placeholder {  opacity: 0 }
+                &:-ms-input-placeholder { opacity: 0 }
+                &::-ms-input-placeholder { opacity: 0 }
             }
             
         }
@@ -37,10 +52,25 @@
         padding: 0.5rem;
         justify-content: space-between;
 
+        @media (max-width: 668px) {
+            width: 90%;
+            justify-content: space-evenly;
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
         h3 {
             color: grey;
             text-align: center;
             margin: 0rem 0.5rem;
+
+            @media (max-width: 668px) {
+                font-size: 0.8rem;
+            }
         }
 
         button {

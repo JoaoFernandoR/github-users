@@ -1,11 +1,14 @@
 import React, {useState} from 'react'
-import './Search.scss'
+import { GithubContext } from '../../context/context'
 import { BsSearch } from 'react-icons/bs'
+// CSS
+import './Search.scss'
 
 const Search = () => {
 
+    const {requests, error} = React.useContext(GithubContext)
+
     const [inputValue, setInputValue] = useState('')
-    // get global things from global context
     
     const handleInput = (event) => {
         setInputValue(event.target.value)
@@ -33,8 +36,9 @@ const Search = () => {
                     placeholder="Enter Github User"/>
                 </div>
                 <div className="other-group">
-                    <button type="submit"> Search </button>
-                    <h3> Requests: 58 /60 </h3>
+                    {requests > 0 && <button type="submit"> Search </button>}                    
+                    {error.show && <p className="error">{error.msg}</p>}
+                    <h3> Requests: {requests} /60 </h3>
                 </div>
             </form>
         </section>
