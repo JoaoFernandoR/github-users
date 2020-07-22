@@ -1,0 +1,61 @@
+.search {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .input-group {
+        display: flex;
+        width: 70%;
+        align-items: center;
+
+        .icon {
+            padding: 0.5rem;
+            margin-top: 0.2rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1.2rem;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            border-bottom: 1px solid grey ;
+
+            &:focus {
+                border-bottom: 1px solid var(--mainGreen) ;
+            }
+            
+        }
+    }
+
+    .other-group {
+        display: flex;
+        align-items: center;
+        width: 30%;
+        padding: 0.5rem;
+        justify-content: space-between;
+
+        h3 {
+            color: grey;
+            text-align: center;
+            margin: 0rem 0.5rem;
+        }
+
+        button {
+            color: var(--mainGreen);
+            border: 1px solid var(--mainGreen);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+
+            &:hover {
+                color: white;
+                background-color: var(--mainGreen);
+                cursor: pointer;
+            }
+        }
+
+    }
+}

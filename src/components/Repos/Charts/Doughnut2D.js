@@ -10,7 +10,7 @@ const ExampleChart = ({data}) => {
 
 const chartConfigs = {
     type: "doughnut2d", // The chart type
-    width: "30%", // Width of the chart
+    width: "400", // Width of the chart
     height: "500", // Height of the chart
     dataFormat: "json", // Data type
     dataSource: {

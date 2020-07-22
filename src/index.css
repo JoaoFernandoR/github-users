@@ -1,3 +1,7 @@
+:root {
+  --mainGreen: #47A699
+}
+
 * {
   margin: 0;
   padding: 0;

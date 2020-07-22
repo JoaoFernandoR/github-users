@@ -28,14 +28,14 @@
 
         a {
             letter-spacing: 0.2rem;
-            color: #47A699;
-            border: 1px solid #47A699;
+            color: var(--mainGreen);
+            border: 1px solid var(--mainGreen);
             padding: 0.4rem 1.2rem;
             border-radius: 50px;
 
             &:hover {
                 color: white;
-                background-color: #47A699;
+                background-color: var(--mainGreen);
             }
         }
 
@@ -59,7 +59,7 @@
         a {
             margin-left: 0.5rem;
             font-size: 0.9rem;
-            color: #47A699;
+            color: var(--mainGreen);
         }
     }
 

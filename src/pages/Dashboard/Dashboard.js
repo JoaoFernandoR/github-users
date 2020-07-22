@@ -13,7 +13,7 @@ const Dashboard = () => {
     return (
     <section className="dashboard">
         {/* <Navbar /> */}
-        {/* <Search /> */}
+        <Search />
         <Info />
         <User />
         <Repos />
