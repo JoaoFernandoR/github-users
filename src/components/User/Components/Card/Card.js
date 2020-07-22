@@ -9,8 +9,8 @@ import './Card.scss'
 
 const Card = () => {
 
-    const { githubUser } = React.useContext(GithubContext)
-    const {avatar_url, html_url, name, company, blog, bio, location, twitter_username} = githubUser
+    const { user } = React.useContext(GithubContext)
+    const {avatar_url, html_url, name, company, blog, bio, location, twitter_username} = user
 
 
     return (

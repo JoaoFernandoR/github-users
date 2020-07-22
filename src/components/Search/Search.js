@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { GithubContext } from '../../context/context'
 import { BsSearch } from 'react-icons/bs'
 // CSS
@@ -6,9 +6,10 @@ import './Search.scss'
 
 const Search = () => {
 
-    const {requests, error} = React.useContext(GithubContext)
+    const {requests, error, searchGithubUser} = React.useContext(GithubContext)
 
     const [inputValue, setInputValue] = useState('')
+
     
     const handleInput = (event) => {
         setInputValue(event.target.value)
@@ -18,6 +19,7 @@ const Search = () => {
         event.preventDefault()
         
         if (inputValue === '') return
+        searchGithubUser(inputValue)
         
         setInputValue('')
         

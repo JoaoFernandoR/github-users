@@ -7,8 +7,8 @@ import './Info.scss'
 
 const Info = () => {
 
-    const {githubUser} = React.useContext(GithubContext)
-    const {following, followers, public_repos, public_gists } = githubUser
+    const {user} = React.useContext(GithubContext)
+    const {following, followers, public_repos, public_gists } = user
 
     const items = [
         { id: 1, icon: <GoRepo size="1.5rem" color= "#C22079"/>, label: 'Repos', api: public_repos},

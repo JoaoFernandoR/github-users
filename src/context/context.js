@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import mockUser from './mockData.js/mockUser'
 import mockRepos from './mockData.js/mockRepos'
 import mockFollowers from './mockData.js/mockFollowers'
+import mockUser from './mockData.js/mockUser'
 import axios from 'axios'
 
 const rootUrl = 'https://api.github.com'
@@ -11,7 +11,7 @@ const GithubContext = React.createContext()
 
 const GithubProvider = ({children}) => {
 
-    const [githubUser, setGithubUser] = useState(mockUser)
+    const [user, setUser] = useState(mockUser)
     const [repos, setRepos] = useState(mockRepos)
     const [followers, setFollowers] = useState(mockFollowers)
     // request loading
@@ -22,6 +22,20 @@ const GithubProvider = ({children}) => {
 
     const toggleError = (show = false, msg = '') => {
         setError({show, msg})
+    }
+
+    const searchGithubUser = async (user) => {
+        toggleError(false)
+        // setLoading
+        await axios({
+            method: 'GET',
+            url : `${rootUrl}/users/${user}`
+        }).then((result) => {
+                setUser(result.data)
+            }
+            ).catch((err) => {
+                toggleError(true, 'User not Found')
+        })    
     }
 
     useEffect( () => {
@@ -41,14 +55,15 @@ const GithubProvider = ({children}) => {
 
         fetchData()
 
-    }, [])
+    }, [user, requests])
 
     const data = {
-        githubUser : githubUser,
         repos : repos,
         followers : followers,
         requests : requests,
-        error : error
+        error : error, 
+        searchGithubUser : searchGithubUser,
+        user : user
     }
 
     return (
