@@ -1,15 +1,15 @@
 import React from 'react'
 import { GithubContext } from '../../../../context/context'
+import Emoji from 'react-emoji-render'
 //CSS
 import './Followers.scss'
 
 const Followers = () => {
 
-    const { followers } = React.useContext(GithubContext)
+    let { followers } = React.useContext(GithubContext)
 
-    return (
-    <section className="followers">
-        {
+    const renderFollowers = () => {
+        return (
             followers.map((item) => {
                 return (
                 <div className="img_container" key={item.login}>
@@ -21,7 +21,25 @@ const Followers = () => {
                 </div>
                 )
             })
+        )
+    }
+
+    const conditionallyRender = () => {
+        if (followers.length === 0) {
+            return (
+                <Emoji text="No Followers yet :cry:" /> 
+            )
         }
+        else {
+            return (
+                renderFollowers()
+            )
+        }
+    }
+ 
+    return (
+    <section className="followers">
+        {conditionallyRender()}
     </section>
     )
 }

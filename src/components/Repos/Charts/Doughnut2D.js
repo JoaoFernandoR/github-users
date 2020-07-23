@@ -17,7 +17,6 @@ const chartConfigs = {
       // Chart Configuration
       chart: {
         caption: "Stars Per Language",
-        theme: "fusion",
         doughnutRadius: '45%',
         showPercentValues: 0,
         theme: 'candy'

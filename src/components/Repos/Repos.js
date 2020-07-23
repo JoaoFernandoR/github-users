@@ -4,29 +4,28 @@ import Doughnut2D from './Charts/Doughnut2D'
 import Pie3D from './Charts/Pie3D'
 import Column3D from './Charts/Column3D'
 import Bar3D from './Charts/Bar3D'
-
 // CSS
 import './Repos.scss'
 
 // STEP 2 - Chart Data
-const chartData = [ /* label e value são necessários */
-    {
-      label: "HTML",
-      value: "11"
-    },
-    {
-      label: "Javascript",
-      value: "80"
-    },
-    {
-      label: "Canada",
-      value: "10"
-    },
-    {
-      label: "CSS",
-      value: "100"
-    },
-  ];
+// const chartData = [  label e value são necessários 
+//     {
+//       label: "HTML",
+//       value: "11"
+//     },
+//     {
+//       label: "Javascript",
+//       value: "80"
+//     },
+//     {
+//       label: "Canada",
+//       value: "10"
+//     },
+//     {
+//       label: "CSS",
+//       value: "100"
+//     },
+//   ];
 
 const Repos = () => {
 

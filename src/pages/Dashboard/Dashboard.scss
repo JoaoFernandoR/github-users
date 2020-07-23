@@ -1,4 +1,16 @@
 .dashboard {
     max-width: 1200px;
     margin: auto;
+
+    .loading_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(80vh - 100px);
+    }
+
+    .loading {
+        width: 300px;
+        height: 300px;
+    }
 }

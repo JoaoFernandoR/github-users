@@ -25,8 +25,10 @@ const GithubProvider = ({children}) => {
     }
 
     const searchGithubUser = async (user) => {
+
         toggleError(false)
-        // setLoading
+        setLoading(true)
+
         await axios({
             method: 'GET',
             url : `${rootUrl}/users/${user}`
@@ -35,7 +37,30 @@ const GithubProvider = ({children}) => {
             }
             ).catch((err) => {
                 toggleError(true, 'User not Found')
-        })    
+            })
+            
+        await axios({
+            method: 'GET',
+            url : `${rootUrl}/users/${user}/repos?per_page=100`
+        }).then((result) => {
+                setRepos(result.data)
+            }
+            ).catch((err) => {
+                toggleError(true, 'Repos not Found')
+            })    
+
+        await axios({
+            method: 'GET',
+            url : `${rootUrl}/users/${user}/followers?per_page=100`
+        }).then((result) => {
+                setFollowers(result.data)
+            }
+            ).catch((err) => {
+                toggleError(true, 'Followers not Found')
+            })     
+
+        setLoading(false)
+
     }
 
     useEffect( () => {
@@ -63,7 +88,8 @@ const GithubProvider = ({children}) => {
         requests : requests,
         error : error, 
         searchGithubUser : searchGithubUser,
-        user : user
+        user : user,
+        loading : loading
     }
 
     return (

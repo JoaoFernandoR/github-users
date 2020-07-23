@@ -6,7 +6,7 @@ import './Search.scss'
 
 const Search = () => {
 
-    const {requests, error, searchGithubUser} = React.useContext(GithubContext)
+    const { requests, error, searchGithubUser, loading } = React.useContext(GithubContext)
 
     const [inputValue, setInputValue] = useState('')
 
@@ -38,7 +38,7 @@ const Search = () => {
                     placeholder="Enter Github User"/>
                 </div>
                 <div className="other-group">
-                    {requests > 0 && <button type="submit"> Search </button>}                    
+                    {requests > 0 && !loading && ( <button type="submit"> Search </button> )}                    
                     {error.show && <p className="error">{error.msg}</p>}
                     <h3> Requests: {requests} /60 </h3>
                 </div>

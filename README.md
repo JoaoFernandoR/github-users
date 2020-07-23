@@ -7,6 +7,7 @@
 * [react-icons](https://react-icons.github.io/react-icons/ "react-icons")
 * [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start "react-router-dom")
 * [fusion-charts](https://www.fusioncharts.com/react-charts?framework=react "fusion charts")
+* [react-emoji-render](https://www.npmjs.com/package/react-emoji-render "react-emoji-render")
 ---
 ## 👍 A Thanks to:
 
