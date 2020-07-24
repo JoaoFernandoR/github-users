@@ -1,0 +1,29 @@
+.navbar {
+
+    padding: 1rem;
+    display: flex;    
+    justify-content: center;
+
+    .user_info {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+        }
+
+        h4 {
+            margin: 0rem 1rem;
+
+            span {
+                color: grey;
+            }
+        }
+
+        button {
+            margin-left: 3rem;
+        }
+    }   
+}

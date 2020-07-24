@@ -31,6 +31,12 @@ Who provided this awesome class and have a lot of excelent courses
 - [List Of Charts](https://www.fusioncharts.com/dev/chart-guide/list-of-charts)
 - [Themes](https://www.fusioncharts.com/dev/themes/introduction-to-themes)
 ---
+## Auth0
+
+- [Auth0 - Main Docs](https://auth0.com/)
+- [React SDK Docs](https://auth0.com/docs/libraries/auth0-react)
+- [REACT SDK API Docs](https://auth0.github.io/auth0-react/)
+---
 ## ✔️ To do 
 - [ ] Finish the the course
 - [ ] Implement a theme switcher
