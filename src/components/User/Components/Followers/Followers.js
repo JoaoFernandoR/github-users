@@ -38,9 +38,12 @@ const Followers = () => {
     }
  
     return (
+    <React.Fragment>
     <section className="followers">
+        <h2 className="titulo"> Followers </h2>
         {conditionallyRender()}
     </section>
+    </React.Fragment>
     )
 }
 

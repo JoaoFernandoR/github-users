@@ -7,28 +7,9 @@ import Bar3D from './Charts/Bar3D'
 // CSS
 import './Repos.scss'
 
-// STEP 2 - Chart Data
-// const chartData = [  label e value são necessários 
-//     {
-//       label: "HTML",
-//       value: "11"
-//     },
-//     {
-//       label: "Javascript",
-//       value: "80"
-//     },
-//     {
-//       label: "Canada",
-//       value: "10"
-//     },
-//     {
-//       label: "CSS",
-//       value: "100"
-//     },
-//   ];
-
 const Repos = () => {
 
+    const { user } = React.useContext(GithubContext)
     const { repos } = React.useContext(GithubContext)
 
     const languages = repos.reduce((total, item) => {
@@ -76,21 +57,33 @@ const Repos = () => {
     stars = Object.values(stars).slice(-5).reverse()
     forks = Object.values(forks).slice(-5).reverse()
     
+    const renderRepos = () => {
+
+      if (!user) return
+
+      else {
+        return (
+          <React.Fragment>
+            <div className="chart" id="chart_1">
+              <Pie3D data={mostUsed}/>
+            </div>
+            <div className="chart" id="chart_2">
+              <Column3D data={stars} />
+            </div>
+            <div className="chart" id="chart_1">
+              <Doughnut2D data={mostPopular} />
+            </div>
+            <div className="chart" id="chart_2">
+              <Bar3D data={forks} />
+            </div>
+          </React.Fragment>
+        )
+      }
+    }
 
     return (
         <section className="repos">
-          <div className="chart">
-            <Pie3D data={mostUsed}/>
-          </div>
-          <div className="chart">
-            <Column3D data={stars} />
-          </div>
-          <div className="chart">
-            <Doughnut2D data={mostPopular} />
-          </div>
-          <div className="chart">
-            <Bar3D data={forks} />
-          </div>
+          {renderRepos()}
         </section>
     )
 }

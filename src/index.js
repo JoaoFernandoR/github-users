@@ -12,7 +12,8 @@ import './index.css';
 ReactDOM.render( 
     <Auth0Provider domain="dev-vfx-t7rm.us.auth0.com" 
     clientId="fkKkhfWyF11fB070fGP7piJUCsS0NRIJ"
-    redirectUri={window.location.origin}>
+    redirectUri={window.location.origin}
+    cacheLocation='localstorage'>
         <GithubProvider>
             <App />
         </GithubProvider>

@@ -27,6 +27,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "build": "CI= react-scripts build",
   "browserslist": {
     "production": [
       ">0.2%",

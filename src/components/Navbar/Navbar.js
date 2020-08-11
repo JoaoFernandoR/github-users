@@ -7,8 +7,6 @@ const Navbar = () => {
 
     const { isAuthenticated, loginWithRedirect, logout, user, isLoading} = useAuth0()
 
-    console.log({isAuthenticated, user, isLoading})
-
     const renderUser = () => {
         if(isAuthenticated) {
             return (
@@ -29,3 +27,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+

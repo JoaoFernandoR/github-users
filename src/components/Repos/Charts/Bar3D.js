@@ -10,7 +10,7 @@ const ExampleChart = ({data}) => {
 
 const chartConfigs = {
     type: "bar3d", // The chart type
-    width: "700", // Width of the chart
+    width: "100%", // Width of the chart - 700
     height: "500", // Height of the chart
     dataFormat: "json", // Data type
     dataSource: {

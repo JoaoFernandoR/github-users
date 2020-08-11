@@ -11,9 +11,9 @@ const GithubContext = React.createContext()
 
 const GithubProvider = ({children}) => {
 
-    const [user, setUser] = useState(mockUser)
-    const [repos, setRepos] = useState(mockRepos)
-    const [followers, setFollowers] = useState(mockFollowers)
+    const [user, setUser] = useState('')
+    const [repos, setRepos] = useState([])
+    const [followers, setFollowers] = useState([])
     // request loading
     const [requests, setRequests] = useState(0)
     const [loading, setLoading] = useState(false)
@@ -32,33 +32,23 @@ const GithubProvider = ({children}) => {
         await axios({
             method: 'GET',
             url : `${rootUrl}/users/${user}`
-        }).then((result) => {
-                setUser(result.data)
-            }
-            ).catch((err) => {
-                toggleError(true, 'User not Found')
-            })
+        }).then( async (result) => {
+            setUser(result.data)
+            await axios({
+                method: 'GET',
+                url : `${rootUrl}/users/${user}/repos?per_page=100`
+            }).then((result) => setRepos(result.data))
+            .catch((err) => toggleError(true, 'User Not Found'))
+    
+            await axios({
+                method: 'GET',
+                url : `${rootUrl}/users/${user}/followers?per_page=100`
+            }).then((result) => setFollowers(result.data))
+            .catch((err) => toggleError(true, 'User Not Found'))    
+        })
+        .catch((err) => toggleError(true, 'User Not Found'))
             
-        await axios({
-            method: 'GET',
-            url : `${rootUrl}/users/${user}/repos?per_page=100`
-        }).then((result) => {
-                setRepos(result.data)
-            }
-            ).catch((err) => {
-                toggleError(true, 'Repos not Found')
-            })    
-
-        await axios({
-            method: 'GET',
-            url : `${rootUrl}/users/${user}/followers?per_page=100`
-        }).then((result) => {
-                setFollowers(result.data)
-            }
-            ).catch((err) => {
-                toggleError(true, 'Followers not Found')
-            })     
-
+               
         setLoading(false)
 
     }
@@ -80,7 +70,7 @@ const GithubProvider = ({children}) => {
 
         fetchData()
 
-    }, [user, requests])
+    }, [user, repos, followers, requests, error])
 
     const data = {
         repos : repos,

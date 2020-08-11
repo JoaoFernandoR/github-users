@@ -15,6 +15,7 @@ const Card = () => {
 
     return (
     <section className="card">
+        <h2 className="titulo"> User </h2>
         <div className="img_container">
             <div className="img_container">
                 <img src={avatar_url} alt={name}/>       

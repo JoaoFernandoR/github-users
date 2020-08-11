@@ -1,6 +1,7 @@
-#### A React project to fetch detailed data about users from github
+[]
+#### A React project to fetch detailed information from github about users and their projects 
 ---
-
+![Logo](./src/images/login-img.svg)
 ## 🚀 Technologies
 
 * [node-sass](https://www.npmjs.com/package/node-sass "node-sass")
@@ -14,7 +15,7 @@
 * [John Smilga](https://www.johnsmilga.com/ "John Smilga") 
 Who provided this awesome class and have a lot of excelent courses
 ---
-## Gihthub API
+## Github API
 
 - [Root Endpoint](https://api.github.com)
 - [Get User](https://api.github.com/users/wesbos)
@@ -38,10 +39,10 @@ Who provided this awesome class and have a lot of excelent courses
 - [REACT SDK API Docs](https://auth0.github.io/auth0-react/)
 ---
 ## ✔️ To do 
-- [ ] Finish the the course
+- [x] Finish the course
 - [ ] Implement a theme switcher
 - [ ] Learn more of Context API
-- [ ] Mess with the global variables
+- [x] Mess with the global variables
 - [ ] Understand more the reduce method
-- [ ] Make the Charts responsible
+- [x] Make the Charts responsible
 

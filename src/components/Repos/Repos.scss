@@ -3,13 +3,32 @@
     display: flex;
     margin-top: 3rem;
     flex-wrap: wrap;
-  
+    padding: 1rem;
+    
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
+    
     .chart {
-        margin: 1rem;
+        width: 48%;
+        margin: 0.5rem auto;    
+    }
 
-        @media (max-width: 1160px) {
-            margin: auto;
+    #chart_1 {
+        width: 45%;
+
+        @media (max-width: 800px) {
+            width: 80%;
         }
     }
+
+    #chart_2 {
+        width: 53%;
+
+        @media (max-width: 800px) {
+            width: 100%;
+        }
+    }
+
 }
 

@@ -13,6 +13,10 @@ html {
   font-family: 'Red Rose', cursive;
 }
 
+body {
+  background-color: #e7e7e7f3;
+}
+
 a {
   text-decoration: none;
   color: inherit

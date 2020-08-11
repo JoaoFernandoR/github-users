@@ -23,7 +23,17 @@
         }
 
         button {
-            margin-left: 3rem;
+            color: grey;
+            border: 1px solid grey;
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            margin-left: 1rem;
+
+            &:hover {
+                color: white;
+                background-color: grey;
+                cursor: pointer;
+            }
         }
     }   
 }
