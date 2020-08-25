@@ -1,7 +1,10 @@
-[]
+[https://git-search-hub.netlify.app/](https://git-search-hub.netlify.app/)
+
 #### A React project to fetch detailed information from github about users and their projects 
 ---
 ![Logo](./src/images/login-img.svg)
+
+---
 ## 🚀 Technologies
 
 * [node-sass](https://www.npmjs.com/package/node-sass "node-sass")
